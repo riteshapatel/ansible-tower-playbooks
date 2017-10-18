@@ -1,0 +1,9 @@
+---
+- name: create a new user
+  iam:
+    iam_type: user
+    name: "{{ username }}"
+    state: present
+    password: "{{ password }}"
+    access_key_state: create
+  register: new_user
